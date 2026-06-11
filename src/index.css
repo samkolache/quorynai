@@ -8,88 +8,90 @@
 
 :root {
   /* Background */
-  --background:              #0a0a0f;
+  --background: #0a0a0f;
   /* Foreground */
-  --foreground:              #e8e0ff;
+  --foreground: #e8e0ff;
 
   /* Primary */
-  --primary:                 #534AB7;
+  --primary: #534AB7;
   /* Primary Hover */
-  --primary-hover:           #6357d1;
+  --primary-hover: #6357d1;
   /* primary foreground */
-  --primary-foreground:      #e8e0ff;
+  --primary-foreground: #e8e0ff;
 
- /* Accents for things like icons */
-  --accent:                  #9b8fff;
+  /* Accents for things like icons */
+  --accent: #9b8fff;
   /* Background for it? */
-  --accent-foreground:       #0a0a0f;
+  --accent-foreground: #0a0a0f;
 
 
   /* Gradient card */
-  --card:                    #1a1334;   /* gradient start */
-  --card-foreground:         #e8e0ff;
-  --card-surface-2:          #0f0a1f;   /* gradient end */
+  --card: #1a1334;
+  /* gradient start */
+  --card-foreground: #e8e0ff;
+  --card-surface-2: #0f0a1f;
+  /* gradient end */
 
 
-  --popover:                 #0f0a1f;
-  --popover-foreground:      #e8e0ff;
+  --popover: #0f0a1f;
+  --popover-foreground: #e8e0ff;
 
 
-  --secondary:               #1a1334;
-  --secondary-foreground:    #e8e0ff;
+  --secondary: #1a1334;
+  --secondary-foreground: #e8e0ff;
 
 
-  --muted:                   #1a1334;
-  --muted-foreground:        #9b8fff;
+  --muted: #1a1334;
+  --muted-foreground: #9b8fff;
 
 
-  --border:                  rgba(83, 74, 183, 0.35);
-  --input:                   rgba(83, 74, 183, 0.2);
-  --ring:                    #534AB7;
-  --radius:                  0.5rem;
+  --border: rgba(83, 74, 183, 0.35);
+  --input: rgba(83, 74, 183, 0.2);
+  --ring: #534AB7;
+  --radius: 0.5rem;
 
-  --destructive:             #ef4444;
-  --destructive-foreground:  #e8e0ff;
+  --destructive: #ef4444;
+  --destructive-foreground: #e8e0ff;
 }
 
 
 @theme inline {
-  --color-background:              var(--background);
-  --color-foreground:              var(--foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  --color-primary:                 var(--primary);
-  --color-primary-hover:           var(--primary-hover);
-  --color-primary-foreground:      var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
 
-  --color-accent:                  var(--accent);
-  --color-accent-foreground:       var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 
-  --color-card:                    var(--card);
-  --color-card-foreground:         var(--card-foreground);
-  --color-card-surface-2:          var(--card-surface-2);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-surface-2: var(--card-surface-2);
 
-  --color-popover:                 var(--popover);
-  --color-popover-foreground:      var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
 
-  --color-secondary:               var(--secondary);
-  --color-secondary-foreground:    var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
-  --color-muted:                   var(--muted);
-  --color-muted-foreground:        var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 
-  --color-border:                  var(--border);
-  --color-input:                   var(--input);
-  --color-ring:                    var(--ring);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 
-  --color-destructive:             var(--destructive);
-  --color-destructive-foreground:  var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
 
-  --radius-sm:  calc(var(--radius) * 0.6);
-  --radius-md:  calc(var(--radius) * 0.8);
-  --radius-lg:  var(--radius);
-  --radius-xl:  calc(var(--radius) * 1.4);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
 
-  --font-sans:    'Inter Variable', system-ui, sans-serif;
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
   --font-heading: 'Cormorant Garamond Variable', serif;
 }
 
@@ -98,34 +100,53 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(83, 74, 183, 0.18), transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(83, 74, 183, 0.12), transparent 55%);
+      background-attachment: fixed;
   }
+
   html {
     @apply font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     @apply font-bold
   }
+
   h1 {
     @apply text-4xl;
   }
+
   h2 {
     @apply text-3xl;
   }
+
   h3 {
     @apply text-2xl;
   }
+
   h4 {
     @apply text-xl;
   }
+
   h5 {
     @apply text-lg;
   }
+
   h6 {
     @apply text-base;
   }
+
   p {
     @apply opacity-70
   }
@@ -139,12 +160,18 @@
 
 /* Defines the animtations shape  */
 @keyframes star-twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Uses above keyframe to actually make the animation */
 @utility animate-twinkle {
   animation: star-twinkle 4s ease-in-out infinite;
 }
-
