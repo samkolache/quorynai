@@ -12,9 +12,9 @@ const navLinks = [
 function Navbar() {
     return (
         <Collapsible.Root className="group">
-            <nav className="flex items-center justify-between bg-background/80 backdrop-blur-md border-b border-primary/25 px-6 py-3">
+            <nav className="flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] bg-background/80 backdrop-blur-md border-b border-primary/25 px-6 py-3">
                 {/* Brand */}
-                <img src={logo} alt="Quoryn Logo" className="h-10" />
+                <img src={logo} alt="Quoryn Logo" className="h-10 md:justify-self-start" />
 
                 {/* Desktop nav links */}
                 <ul className="hidden md:flex gap-10 items-center">
@@ -28,7 +28,7 @@ function Navbar() {
                 </ul>
 
                 {/* Desktop buttons */}
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4 md:justify-self-end">
                     <Button variant="outline">Sign in</Button>
                     <Button>Get Started</Button>
                 </div>
