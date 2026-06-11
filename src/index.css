@@ -136,3 +136,15 @@
     @apply text-5xl;
   }
 }
+
+/* Defines the animtations shape  */
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Uses above keyframe to actually make the animation */
+@utility animate-twinkle {
+  animation: star-twinkle 4s ease-in-out infinite;
+}
+
