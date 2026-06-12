@@ -188,3 +188,12 @@
 @utility text-glow {
   text-shadow: 0 0 18px rgba(83, 74, 183, 0.6);
 }
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
