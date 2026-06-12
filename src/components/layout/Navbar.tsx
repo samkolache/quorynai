@@ -11,7 +11,7 @@ const navLinks = [
 
 function Navbar() {
     return (
-        <Collapsible.Root className="group">
+        <Collapsible.Root className="group sticky top-0 z-50">
             <nav className="flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] bg-background/80 backdrop-blur-md border-b border-primary/25 px-6 py-3">
                 {/* Brand */}
                 <img src={logo} alt="Quoryn Logo" className="h-10 md:justify-self-start" />

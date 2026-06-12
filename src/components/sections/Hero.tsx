@@ -2,8 +2,8 @@ import { Button } from "../ui/button"
 
 function Hero() {
     return (
-        <section className=" py-32 flex flex-col gap-10 items-center max-w-4xl mx-auto text-center ">
-            <h1 className="text-[72px] text-glow font-medium">The answers you've been <br /> looking for.</h1>
+        <section className=" py-48 flex flex-col gap-10 items-center max-w-4xl mx-auto text-center ">
+            <h1 className="text-[72px] text-glow font-light">The answers you've been <br /> looking for.</h1>
 
             <div className="flex flex-col gap-3">
                 <p className="text-xl">Psychic readings, astrology, tarot, and manifestation. Built around your life, <br /> with extreme accuracy.</p>

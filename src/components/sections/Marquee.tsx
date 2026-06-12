@@ -13,7 +13,8 @@ function Marquee() {
     
     
     return (
-        <div className="py-6 bg-background/80 backdrop-blur-md text-center">
+        <section className="py-24">
+            <div className="py-6 bg-background/80 backdrop-blur-md text-center">
             <p className="uppercase tracking-[0.3em] text-xs">Our readers say Quoryn knows things it shouldn't.</p>
             <div className="mt-5 overflow-hidden">
                 <div className="flex w-max gap-12 whitespace-nowrap animate-marquee">
@@ -25,8 +26,9 @@ function Marquee() {
                     ))}
                 </div>
             </div>
-            
         </div>
+        </section>
+        
     )
 }
 
