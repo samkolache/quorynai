@@ -5,6 +5,7 @@ import ChoosePath from './components/sections/ChoosePath'
 import Example from './components/sections/Example'
 import Hero from './components/sections/Hero'
 import Marquee from './components/sections/Marquee'
+import Steps from './components/sections/Steps'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Marquee />
       <Example />
       <ChoosePath />
+      <Steps />
     </>
   )
 }
