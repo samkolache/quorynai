@@ -50,8 +50,8 @@ function Pricing() {
     const isAnnual = billing === "annual"
 
     return (
-        <section className="max-w-6xl mx-auto flex flex-col gap-8 items-center text-center py-24">
-            <h2 className="text-5xl font-light">Choose your access</h2>
+        <section className="max-w-6xl mx-auto flex flex-col gap-8 items-center text-center py-12 md:py-24 px-6">
+            <h2 className="text-[clamp(1.875rem,5vw,3rem)] font-light">Choose your access</h2>
 
             <ToggleGroup
                 value={[billing]}
@@ -78,7 +78,7 @@ function Pricing() {
                 </ToggleGroupItem>
             </ToggleGroup>
 
-            <div className="mt-4 flex w-full items-center justify-center gap-6">
+            <div className="mt-4 flex flex-col md:flex-row w-full items-center justify-center gap-12 md:gap-6">
                 {cardContent.map((item) => (
                     <Card
                         key={item.accessType}
@@ -99,7 +99,7 @@ function Pricing() {
                             <h3 className="font-heading text-2xl font-light">{item.accessType}</h3>
 
                             <div className="flex items-baseline gap-1.5">
-                                <span className="font-heading text-5xl font-light">
+                                <span className="font-heading text-[clamp(2.625rem,2.5rem+0.625vw,3rem)] font-light">
                                     {isAnnual ? item.annualPrice : item.price}
                                 </span>
                                 {(isAnnual ? item.annualPrice : item.price) !== "$0.00" && (
@@ -120,7 +120,8 @@ function Pricing() {
 
                             <Button
                                 variant={item.popular ? "default" : "outline"}
-                                className={cn("mt-auto h-auto w-full px-6 py-3", !item.popular && "bg-transparent")}
+                                size="md"
+                                className={cn("mt-auto w-full", !item.popular && "bg-transparent")}
                             >
                                 Choose {item.accessType}
                             </Button>

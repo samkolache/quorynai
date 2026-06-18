@@ -41,9 +41,9 @@ function ChoosePath() {
 
 
     return (
-        <section className="flex flex-col items-center gap-12 py-24 max-w-6xl mx-auto text-center">
-            <h2 className="text-5xl font-light">Choose your path</h2>
-            <div className="grid grid-cols-2 gap-5 max-w-5xl">
+        <section className="flex flex-col items-center gap-12 py-12 md:py-24 max-w-6xl mx-auto text-center px-6">
+            <h2 className="text-[clamp(1.875rem,5vw,3rem)] font-light">Choose your path</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl">
                 {cardContent.map((item) => (
                     <Card key={item.title} className="
                     [--card-spacing:--spacing(6)] 

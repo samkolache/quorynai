@@ -1,5 +1,6 @@
 import { Collapsible } from "@base-ui/react/collapsible"
 import { Menu, X } from "lucide-react"
+import { Link } from "react-router-dom"
 import { Button } from "../ui/button"
 import logo from "../../assets/logo.svg"
 
@@ -14,15 +15,17 @@ function Navbar() {
         <Collapsible.Root className="group sticky top-0 z-50">
             <nav className="flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr] bg-background/80 backdrop-blur-md border-b border-primary/25 px-6 py-3">
                 {/* Brand */}
-                <img src={logo} alt="Quoryn Logo" className="h-10 md:justify-self-start" />
+                <Link to="/" className="md:justify-self-start">
+                    <img src={logo} alt="Quoryn Logo" className="h-8 md:h-10" />
+                </Link>
 
                 {/* Desktop nav links */}
                 <ul className="hidden md:flex gap-10 items-center">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
-                            <a href={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                            <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
                                 {label}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
@@ -48,9 +51,9 @@ function Navbar() {
                     <ul className="flex flex-col gap-3">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
-                                <a href={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                                <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
                                     {label}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

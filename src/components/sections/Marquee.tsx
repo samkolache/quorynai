@@ -13,13 +13,13 @@ function Marquee() {
     
     
     return (
-        <section className="py-24">
-            <div className="py-6 bg-background/80 backdrop-blur-md text-center">
-            <p className="uppercase tracking-[0.3em] text-xs">Our readers say Quoryn knows things it shouldn't.</p>
-            <div className="mt-5 overflow-hidden">
+        <section className="py-12 md:py-24 text-center flex flex-col gap-6">
+            <p className="uppercase tracking-[0.3em] text-xs px-6 md:px-0">Our readers say Quoryn knows things it shouldn't.</p>
+            <div className=" py-4 md:py-6 lg:py-8 bg-background/80 backdrop-blur-md text-center">
+            <div className="overflow-hidden">
                 <div className="flex w-max gap-12 whitespace-nowrap animate-marquee">
                     {[...marqueeStatements, ...marqueeStatements].map((statement, i) => (
-                        <p key={i} className="flex items-center gap-12">
+                        <p key={i} className="flex items-center gap-12 text-sm md:text-base">
                             {statement}
                             <span className="text-primary">·</span>
                         </p>

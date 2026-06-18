@@ -21,12 +21,12 @@ function Steps() {
 
 
     return (
-        <section className="flex flex-col items-center gap-12 py-24 max-w-6xl mx-auto text-center">
-            <h2 className="text-5xl font-light">How it works</h2>
-            <div className="flex gap-12">
+        <section className="flex flex-col items-center gap-10 md:gap-12 py-12 md:py-24 max-w-6xl mx-auto text-center px-6">
+            <h2 className="text-[clamp(1.875rem,5vw,3rem)] font-light">How it works</h2>
+            <div className="flex flex-col md:flex-row gap-10 md:gap-12">
                 {stepContent.map((step) => (
                     <div key={step.number} className="flex flex-1 flex-col gap-3 text-left">
-                        <span className="text-6xl font-heading text-glow text-primary">{step.number}</span>
+                        <span className="text-[clamp(3rem,2.75rem+1.25vw,3.75rem)] font-heading text-glow text-primary">{step.number}</span>
                         <h3 className="font-light font-heading">{step.title}</h3>
                         <p>{step.desc}</p>
                     </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../../assets/logo.svg"
 
 const footerLinks = [
@@ -8,17 +9,19 @@ const footerLinks = [
 
 function Footer() {
     return (
-        <footer className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6 bg-background/80 backdrop-blur-md border-t border-primary/25 px-6 py-6">
+        <footer className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center justify-items-center md:justify-items-stretch gap-6 bg-background/80 backdrop-blur-md border-t border-primary/25 px-6 py-3">
             {/* Brand */}
-            <img src={logo} alt="Quoryn Logo" className="h-10 md:justify-self-start" />
+            <Link to="/" className="md:justify-self-start">
+                <img src={logo} alt="Quoryn Logo" className="h-8 md:h-10" />
+            </Link>
 
             {/* Center links */}
             <ul className="flex flex-wrap justify-center gap-10 items-center">
                 {footerLinks.map(({ href, label }) => (
                     <li key={href}>
-                        <a href={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                        <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
                             {label}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
