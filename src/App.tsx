@@ -1,13 +1,19 @@
 import './App.css'
-import Navbar from './components/layout/Navbar'
-import StarField from './components/layout/StarField'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import About from './pages/About'
 
 function App() {
   return (
-    <>
-      <StarField />
-      <Navbar />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -26,7 +26,7 @@
 
 
   /* Gradient card */
-  --card: #1a1334;
+   --card: oklch(0.17 0.03 285);
   /* gradient start */
   --card-foreground: #e8e0ff;
   --card-surface-2: #0f0a1f;
@@ -174,4 +174,43 @@
 /* Uses above keyframe to actually make the animation */
 @utility animate-twinkle {
   animation: star-twinkle 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px -6px rgba(83, 74, 183, 0.4); }
+  50% { box-shadow: 0 0 36px -2px rgba(83, 74, 183, 0.75); }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 3.5s ease-in-out infinite;
+}
+
+@utility text-glow {
+  text-shadow: 0 0 18px rgba(83, 74, 183, 0.6);
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@utility glow-purple {
+  box-shadow: 0 0 24px -4px rgba(83, 74, 183, 0.55), 0 0 60px -20px rgba(83, 74, 183, 0.5);
+}
+
+@keyframes orbit-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@utility animate-orbit-slow {
+  animation: orbit-spin 60s linear infinite;
+}
+
+@utility animate-orbit-reverse {
+  animation: orbit-spin 90s linear infinite reverse;
 }
