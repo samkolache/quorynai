@@ -1,27 +1,19 @@
 import './App.css'
-import Navbar from './components/layout/Navbar'
-import StarField from './components/layout/StarField'
-import ChoosePath from './components/sections/ChoosePath'
-import Footer from './components/layout/Footer'
-import Example from './components/sections/Example'
-import Hero from './components/sections/Hero'
-import Marquee from './components/sections/Marquee'
-import Pricing from './components/sections/Pricing'
-import Steps from './components/sections/Steps'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import About from './pages/About'
 
 function App() {
   return (
-    <>
-      <StarField />
-      <Navbar />
-      <Hero />
-      <Marquee />
-      <Example />
-      <ChoosePath />
-      <Steps />
-      <Pricing />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

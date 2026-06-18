@@ -201,3 +201,16 @@
 @utility glow-purple {
   box-shadow: 0 0 24px -4px rgba(83, 74, 183, 0.55), 0 0 60px -20px rgba(83, 74, 183, 0.5);
 }
+
+@keyframes orbit-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@utility animate-orbit-slow {
+  animation: orbit-spin 60s linear infinite;
+}
+
+@utility animate-orbit-reverse {
+  animation: orbit-spin 90s linear infinite reverse;
+}
