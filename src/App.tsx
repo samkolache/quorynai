@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
+import UserDetails from './pages/onboarding/UserDetails'
+import ChoosePathPage from './pages/onboarding/ChoosePath'
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
         </Route>
+        <Route path="onboarding/user-details" element={<UserDetails />} />
+        <Route path="onboarding/choose-path" element={<ChoosePathPage />} />
       </Routes>
     </BrowserRouter>
   )
