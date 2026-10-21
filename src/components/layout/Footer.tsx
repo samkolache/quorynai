@@ -19,7 +19,7 @@ function Footer() {
             <ul className="flex flex-wrap justify-center gap-10 items-center">
                 {footerLinks.map(({ href, label }) => (
                     <li key={href}>
-                        <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                        <Link to={href} onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-foreground/80 transition-colors">
                             {label}
                         </Link>
                     </li>
@@ -27,7 +27,7 @@ function Footer() {
             </ul>
 
             {/* Disclaimer */}
-            <p className="text-sm text-foreground/60 md:justify-self-end">
+            <p className="text-xs text-foreground/60 md:justify-self-end">
                 For entertainment purposes only.
             </p>
         </footer>

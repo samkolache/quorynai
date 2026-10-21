@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
 
@@ -24,7 +25,7 @@ function Example() {
                         </div>
                     ))}
                 </div>
-                <Button size="cta" className=" self-start md:self-center">Start your reading</Button>
+                <Button size="cta" className=" self-start md:self-center" render={<Link to="/onboarding" />} nativeButton={false}>Start your reading</Button>
                 </div>
                 <img src="/example.png" alt="Quoryn conversation example" className="w-full md:w-[500px] shrink-0 rounded-xl" />
             </section>

@@ -9,7 +9,7 @@ function Steps() {
         {
             number: "02",
             title: "Choose your path",
-            desc: "Pick astrology, tarot, manifestation, or psychic reading — or explore all four."
+            desc: "Pick astrology, tarot, manifestation, or psychic reading, or explore all four."
         },
         {
             number: "03",

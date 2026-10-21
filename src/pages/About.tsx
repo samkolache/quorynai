@@ -36,26 +36,27 @@ function About() {
 
                     <div className="flex max-w-lg flex-col gap-4">
                         <p className="text-lg leading-relaxed">
-                            Quoryn began with a simple belief — that the wisdom of the stars
+                            Quoryn began with a simple belief: the wisdom of the stars
                             shouldn't sit behind an appointment or a waiting room.
                         </p>
-                        <p className="leading-relaxed">
+                        <p className="text-lg leading-relaxed">
                             We blend ancient practice with intelligent technology to give you
                             readings that feel personal, present, and unmistakably yours.
-                            Astrology, tarot, manifestation, and psychic insight — woven into one
+                            Astrology, tarot, manifestation, and psychic insight, woven into one
                             living conversation that knows your sky.
                         </p>
                     </div>
 
                     <div className="flex items-center gap-4 pt-2">
                         <Button
-                            render={<Link to="/" />}
-                            className="bg-primary h-auto px-7 py-3.5 font-heading text-base animate-pulse-glow"
+                            render={<Link to="/onboarding" />}
+                            nativeButton={false}
+                            className="bg-primary h-auto px-7 py-3.5 text-base animate-pulse-glow"
                         >
                             Begin your free reading
                         </Button>
                         <span className="font-heading text-sm italic text-foreground/50">
-                            — written under a waxing moon
+                            Written under a waxing moon
                         </span>
                     </div>
                 </div>

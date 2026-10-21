@@ -23,7 +23,7 @@ function Navbar() {
                 <ul className="hidden md:flex gap-10 items-center">
                     {navLinks.map(({ href, label }) => (
                         <li key={href}>
-                            <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                            <Link to={href} onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-foreground/80 transition-colors">
                                 {label}
                             </Link>
                         </li>
@@ -32,8 +32,8 @@ function Navbar() {
 
                 {/* Desktop buttons */}
                 <div className="hidden md:flex items-center gap-4 md:justify-self-end">
-                    <Button variant="outline">Sign in</Button>
-                    <Button>Get Started</Button>
+                    <Button variant="outline" render={<Link to="/signin" />} nativeButton={false}>Sign in</Button>
+                    <Button render={<Link to="/onboarding" />} nativeButton={false}>Get Started</Button>
                 </div>
 
                 {/* Mobile hamburger trigger */}
@@ -51,15 +51,15 @@ function Navbar() {
                     <ul className="flex flex-col gap-3">
                         {navLinks.map(({ href, label }) => (
                             <li key={href}>
-                                <Link to={href} className="text-foreground hover:text-foreground/80 transition-colors">
+                                <Link to={href} onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-foreground/80 transition-colors">
                                     {label}
                                 </Link>
                             </li>
                         ))}
                     </ul>
                     <div className="flex flex-col gap-2">
-                        <Button variant="outline" className="w-full">Sign in</Button>
-                        <Button className="w-full">Get Started</Button>
+                        <Button variant="outline" className="w-full" render={<Link to="/signin" />} nativeButton={false}>Sign in</Button>
+                        <Button className="w-full" render={<Link to="/onboarding" />} nativeButton={false}>Get Started</Button>
                     </div>
                 </div>
             </Collapsible.Panel>

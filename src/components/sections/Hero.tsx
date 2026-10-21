@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Button } from "../ui/button"
 
 function Hero() {
@@ -11,7 +12,7 @@ function Hero() {
             </div>
            
            <div className="flex flex-col gap-3">
-                <Button size="cta" className="animate-pulse-glow">Begin your free reading</Button>
+                <Button size="cta" className="animate-pulse-glow" render={<Link to="/onboarding" />} nativeButton={false}>Begin your free reading</Button>
            </div>
             
         </section>
